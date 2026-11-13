@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo</title>
+    
+</head>
+<body>
+    <header>
+
+         <h1>Como está o céu hoje?</h1>
+
+         <div id="buscar">
+            <input type="text" id="txtbuscar" placeholder="Buscar cidade...">
+            <button id="btnBuscar"> Buscar</button>
+         </div>
+
+    </header>
+
+    <main id="painel">
+        <section id="atual">
+            <div id="crt-atual">
+                <div id="local">
+                    <div id="cdd">Porto Alegre, BR</div>
+                    <div id="data">sexta-feira, 13 nov. de 2026</div>
+                </div>
+                <div id="infor-atual">
+                    <img id="icone-atual" src="/imagens/icon-sunny.webp" alt="" width="320" height="320" >
+                    <div id="temp-atual"><span id="temp">20</span>&deg;</div>
+                </div>
+            </div>
+
+            <div id="condicoes">
+                <div class="bl-condicoes">
+                    <p class="condicao-titulo">Sensação Térmica</p>
+                    <p class="condicao-valor"><span id="sensacao"></span>&deg;</p>
+                </div>
+                <div class="bl-condicoes">
+                    <p class="condicao-titulo">Umidade</p>
+                    <p class="condicao-valor"><span id="umidade"></span>%</p>
+                </div>
+                <div class="bl-condicoes">
+                    <p class="condicao-titulo">Vento</p>
+                    <p class="condicao-valor" id="vento"></p>
+                </div>
+                <div class="bl-condicoes">
+                    <p class="condicao-titulo">Precipitação</p>
+                    <p class="condicao-valor" id="precipitacao"></p>
+                </div>
+            </div>
+        </section>
+         
+        <section id="diaria">
+            <h2 class="titulo-secao">Previsão Diária</h2>
+            <div id="dias"></div>
+        </section>
+
+        <section id="por-hora">
+            <div id="por-hora-conteudo">
+              <div id="por-hora-topo">
+                <h2 class="titulo-secao">Previsão por Hora</h2>
+                <section id="selDia"></section>
+              </div> 
+              <div id="hora"></div>  
+            </div>
+        </section>
+    </main>
+</body>
+</html>
