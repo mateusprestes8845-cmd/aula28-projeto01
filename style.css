@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 300;
+    font-display: swap;
+    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-display: swap;
+    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 600;
+    font-display: swap;
+    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-600italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-display: swap;
+    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    font-weight: 700;
+    font-display: swap;
+    src: url('aula28-projeto01/fontes/bricolage-grotesque-v8-latin-700.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(3, 1, 45);
+    color: white;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-bottom: 80px;
+}
+
+img {
+    max-width: 100%;
+}
+
+input, button, select {
+    font: inherit;
+    width: 100%;
+    border: none;
+
+}
+
+header, main {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+.bloco {
+    background-color: rgb(39, 37, 65);
+    border: 1px solid rgb(61, 59, 94);
+    border-radius: 12px;
+}
+
+.titulo-secao {
+    font-size: 20px;
+}
+
+header {
+    display: grid;
+    justify-items: center;
+    padding-top: 48px;
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-family: 'Bricolage Grotesque', Arial, Helvetica, sans-serif;
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 48px;
+    max-width: 520px;
+}
+
+#buscar {
+    display: grid;
+    gap: 12px 16px;
+    width: 100%;
+    max-height: 656px;
+}
+
+#txtbuscar {
+   background-color: rgb(39, 37, 65) url('imagens/icon-search.svg') no-repeat 24px center;
+   color: rgb(213, 212, 217);
+   font-size: 20px;
+   padding: 16px 20px 16px 60px;
+   border-radius: 12px;
+}
+
+#txtbuscar:focus {
+    outline: 2px solid rgb(213,212, 217);
+}
+
+#btnBuscar {
+    background-color:  rgb(68, 85, 218);
+    color: white;
+    font-size: 20px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    transition: background-color 120ms ease-in-out;
+}
+
+#btnBuscar:hover {
+    background-color: rgb(45, 28, 156);
+    cursor: pointer;
+}
+
+#painel {
+    display: grid;
+    gap: 32px;
+    grid-template-areas: 
+          'atual'
+          'diaria'
+          'por-hora';
+}
+
+#atual {
+    grid-area: atual;
+}
+
+#crt-atual {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 40px 24px;
+    background: rgb(45, 28, 156 ) url('imagens/bg-today-small.svg') no-repeat center bottom;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: clip;
+}
+
+#local {
+    text-align: center;
+}
+
+#cdd {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+#data {
+    font-size: 18px;
+    color: rgb(213, 212, 217);
+}
+
+#infor-atual {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#icone-atual {
+    width: 120px;
+    height: auto;
+}
+
+#temp-atual {
+    font-size: 96px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -2%;
+}
+
