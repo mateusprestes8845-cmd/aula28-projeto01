@@ -190,3 +190,182 @@ h1 {
     letter-spacing: -2%;
 }
 
+
+#condicoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.condicao {
+    padding: 20px;
+}
+
+.condicao-titulo {
+    font-size: 18px;
+    color: rgb(213, 212, 217);
+    margin-bottom: 24px;
+}
+
+.condicao-valor {
+    font-size: 32px;
+    font-weight: 300; 
+}
+
+#diaria {
+    grid-area: diaria;
+}
+
+#diaria .titulo-secao {
+  margin-bottom: 20px;
+}
+
+#dias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    min-height: 166px;
+}
+
+.dia {
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+.dia-nome {
+    font-size: 18px;
+}
+
+.dia-icone {
+    width: 60px;
+    height: auto;
+}
+
+.dia-temps {
+    justify-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.dia-min {
+    color: rgb(213, 212, 217);
+}
+
+#por-hora {
+    grid-area: por-hora;
+    position: relative;
+}
+
+#por-hora-conteudo {
+    background-color: rgb(39, 37, 65 );
+    border-radius: 20px;
+    padding: 20px 16px;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+#por-hora-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 16px;
+}
+
+#por-hora .titulo-secao {
+    font-weight: 600;
+}
+
+#selDia {
+    background-color: rgb(49, 47, 75);
+    color: white;
+    font-size: 14px;
+    width: auto;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+#horas {
+    display: grid;
+    gap: 16px;
+}
+
+.hora {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px 10px 12px;
+    min-height: 60px;
+    background-color: rgb(49, 47, 75);
+    border: 1px solid rgb(61, 59, 94);
+    border-radius: 8px;
+}
+
+.hora-icone {
+    width: 40px;
+    height: auto;
+}
+
+.hora-texto {
+    font-size: 20px;
+}
+
+.hora-temp {
+    font-size: 16px;
+    justify-self: end;
+}
+
+@media (min-width: 700px) {
+    header, main {
+       width: min(calc(100% - 48px), 1216);
+    }
+
+    #buscar {
+     grid-template-columns: 1fr auto;
+    }
+    
+    #crt-atual {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(/imagens/bg-today-large.svg);
+        padding-top: 83px;
+        padding-bottom: 83px;
+    }
+
+    #condicoes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #dias {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    #selDia {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        max-width: none;
+    }
+
+    #painel {
+        gap: 48px 32px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        'atual atual por-hora'
+        'diaria diaria por-hora';
+    }
+
+    #por-hora-conteudo {
+        position: absolute;
+        height: 100%;
+        max-height: none;
+    }
+}
