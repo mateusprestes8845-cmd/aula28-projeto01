@@ -4,21 +4,21 @@
     font-family: 'DM Sans';
     font-weight: 300;
     font-display: swap;
-    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-300.woff2') format('woff2');
+    src: url('fontes/dm-sans-v16-latin-300.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'DM Sans';
     font-weight: 500;
     font-display: swap;
-    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-500.woff2') format('woff2');
+    src: url('fontes/dm-sans-v16-latin-500.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'DM Sans';
     font-weight: 600;
     font-display: swap;
-    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-600.woff2') format('woff2');
+    src: url('fontes/dm-sans-v16-latin-600.woff2') format('woff2');
 }
 
 @font-face {
@@ -26,21 +26,21 @@
     font-style: italic;
     font-weight: 600;
     font-display: swap;
-    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-600italic.woff2') format('woff2');
+    src: url('fontes/dm-sans-v16-latin-600italic.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'DM Sans';
     font-weight: 700;
     font-display: swap;
-    src: url('aula28-projeto01/fontes/dm-sans-v16-latin-700.woff2') format('woff2');
+    src: url('fontes/dm-sans-v16-latin-700.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Bricolage Grotesque';
     font-weight: 700;
     font-display: swap;
-    src: url('aula28-projeto01/fontes/bricolage-grotesque-v8-latin-700.woff2') format('woff2');
+    src: url('fontes/bricolage-grotesque-v8-latin-700.woff2') format('woff2');
 }
 
 * {
@@ -73,7 +73,7 @@ header, main {
     margin: 0 auto;
 }
 
-.bloco {
+.bl {
     background-color: rgb(39, 37, 65);
     border: 1px solid rgb(61, 59, 94);
     border-radius: 12px;
@@ -332,7 +332,7 @@ h1 {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        background-image: url(/imagens/bg-today-large.svg);
+        background-image: url('imagens/bg-today-large.svg');
         padding-top: 83px;
         padding-bottom: 83px;
     }
