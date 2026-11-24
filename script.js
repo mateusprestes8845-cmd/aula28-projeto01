@@ -2,7 +2,7 @@ let txtbuscar = document.getElementById('txtbuscar')
 let btnBuscar = document.getElementById('btnBuscar')
 let cdd = document.getElementById('cdd')
 let data = document.getElementById('data')
-let temp = document.getElementById('temp')
+let tempe = document.getElementById('tempe')
 let sensacao = document.getElementById('sensacao')
 let umidade = document.getElementById('umidade')
 let vento = document.getElementById('vento')
@@ -46,7 +46,7 @@ async function buscarcdd() {
         let resposta = await fetch(`https://nominatim.openstreetmap.org/search?q=${buscar}&format=jsonv2&addressdetails=1&accept-language=pt-BR`)
 
         if (!resposta.ok) {
-            throw new Error('Status: ' + resposta.status);
+            throw new Error('Status: ' + resposta.status)
 
         }
 
@@ -64,7 +64,7 @@ function mostrarLocal(local) {
     let end = local.address
 
     let nomecdd = end.city || end.town || end.village || end.municipality || local.name
-    let pais = end. country_code.toUpperCase()
+    let pais = end.country_code.toUpperCase()
 
     let hoje = new Intl.DateTimeFormat('pt-BR', {
         weekday: 'long',
@@ -107,18 +107,18 @@ function mostrarTempoAtual () {
     let atual = dadosTempo.current
     let unidades = dadosTempo.current_units
 
-    temp.innerText = Math.round(atual.temperature_2m)
+    tempe.innerText = Math.round(atual.temperature_2m)
     sensacao.innerText = Math.round(atual.apparent_temperature)
     umidadde. innerText = atual.relative_humidity_2m
     vento.innerText = `${atual.wind_speed_10m} ${unidades.wind_speed_10m}`
     precipitacao.innerText = `${atual.precipitation} ${unidades.precipitation}`
 }
 
-function criarIcone (codigo,classe) {
+function criarIcone (codigo, classe) {
     let nomeIcone = icones[codigo]
 
     let img = document.createElement('img')
-    img.classList(classe)
+    img.classList.add(classe)
     img.src = `imagems/icon-${nomeIcone}.webp`
     img.alt = descricoes[nomeIcone]
     img.width = 320
@@ -129,7 +129,7 @@ function criarIcone (codigo,classe) {
 function mostrarPrevisaoDiaria () {
     let diaria = dadosTempo.daily
 
-    dias.innerHTML= ''
+    dias.innerHTML = ''
 
     for (let i = 0; i < 7; i++) {
         let nomeDia = new Intl.DateTimeFormat('pt-BR', { weekday: 'short' }).format(new Date(diaria.time[i]))
@@ -183,10 +183,11 @@ function mostrarPrevisaoPorHora() {
        let temp = document.createElement('p')
        temp.classList.add('hora-temp')
        temp.innerText = Math.round(porHora.temperature_2m[h]) + '°'
-
+       
+       hora.appendChild(icone)
        hora.appendChild(texto)
        hora.appendChild(temp)
-       hora.appendChild(hora)
+       horas.appendChild(hora)
     }
 }
 
@@ -208,5 +209,3 @@ selDia.addEventListener('change', mostrarPrevisaoPorHora)
 
 preencherDias()
 buscarcdd()
-
-
