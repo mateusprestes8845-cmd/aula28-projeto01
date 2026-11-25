@@ -109,7 +109,7 @@ function mostrarTempoAtual () {
 
     tempe.innerText = Math.round(atual.temperature_2m)
     sensacao.innerText = Math.round(atual.apparent_temperature)
-    umidadde. innerText = atual.relative_humidity_2m
+    umidade. innerText = atual.relative_humidity_2m
     vento.innerText = `${atual.wind_speed_10m} ${unidades.wind_speed_10m}`
     precipitacao.innerText = `${atual.precipitation} ${unidades.precipitation}`
 }
