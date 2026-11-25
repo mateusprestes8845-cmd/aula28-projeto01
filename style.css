@@ -194,6 +194,7 @@ h1 {
 #condicoes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 
 .condicao {
@@ -308,4 +309,65 @@ h1 {
 .hora-icone {
     width: 40px;
     height: auto;
+}
+
+.hora-texto {
+    font-size: 20px;
+}
+
+.hora-temp {
+    font-size: 16px;
+    justify-self: end;
+}
+
+
+@media (min-width: 700px) {
+        header, main {
+            width: min(calc(100% - 48px), 1216x);
+        }
+
+        #buscar {
+            grid-template-columns: 1fr auto;
+        }
+
+        #crt-atual {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url(imagens/bg-today-large.svg);
+            padding-top: 83px;
+            padding-bottom: 83px;
+        }
+
+        #condicoes {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #dias {
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        #selDia {
+            font-size: 16px;
+        }
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        max-width: none;
+    }
+
+    #painel {
+        gap: 48px 32px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        'atual atual por-hora'
+        'diaria diaria por-hora';
+    }
+
+    #por-hora-conteudo {
+        position: absolute;
+        height: 100%;
+        max-height: none;
+    }
 }
