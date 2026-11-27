@@ -87,7 +87,7 @@ async function buscarTempo(lat, lon) {
     + '&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm'
 
     try {
-        let resposta = await fretch(url)
+        let resposta = await fetch(url)
 
         if (!resposta.ok) {
             throw new Error('Status: ' + resposta.status)
@@ -119,7 +119,7 @@ function criarIcone (codigo, classe) {
 
     let img = document.createElement('img')
     img.classList.add(classe)
-    img.src = `imagems/icon-${nomeIcone}.webp`
+    img.src = `imagens/icon-${nomeIcone}.webp`
     img.alt = descricoes[nomeIcone]
     img.width = 320
     img.heigth = 320
@@ -144,7 +144,7 @@ function mostrarPrevisaoDiaria () {
         let icone = criarIcone(diaria.weather_code[i], 'dia-icone')
 
         let temps = document.createElement('div')
-        temps.classList('dia-temps')
+        temps.classList.add('dia-temps')
 
         let maxima = document.createElement('p')
         maxima.innerText = Math.round(diaria.temperature_2m_max[i]) + '°'
@@ -170,7 +170,7 @@ function mostrarPrevisaoPorHora() {
 
     horas.innerHTML = ''
 
-    for ( let h = primeiraHora; 1 < primeiraHora + 24; h++) {
+    for ( let h = primeiraHora; h < primeiraHora + 24; h++) {
         let hora = document.createElement('div')
         hora.classList.add('hora')
 
